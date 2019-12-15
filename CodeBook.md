@@ -1,4 +1,5 @@
-## Code Book
+Code Book
+=========
 
 The data utilized in the project were collected from the accelerometers from the Samsung Galaxy S smartphone used in a series of experiments.
 
@@ -81,3 +82,19 @@ tBodyAccMean
 tBodyAccJerkMean
 tBodyGyroMean
 tBodyGyroJerkMean
+
+
+Data Cleaning and Transformations
+=================================
+
+- Read separated data (X_train, X_test, y_train, y_test, feature names, subject labels) into individual dataframes
+
+- Map activity label numbers 1-6 to descriptive activity names ("Walking", "Walking Upstairs", "Walking Downstairs", "Sitting", "Standing", "Laying")
+
+- Label variables with descriptive names and add activity and subject columns to both training and test set data
+
+- Merge training and test sets to create one full dataset
+
+- Extract only the variables related to mean and standard deviation by using the regular expression pattern '.mean\\(\\)|.std\\(\\)'
+
+- Create separate tidy dataset "results_mean.txt" with mean of each variable summarized by activity name and subject number
